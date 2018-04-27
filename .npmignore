@@ -1,8 +1,0 @@
-.c9
-.npmignore
-Makefile
-examples/
-src/
-test/
-coverage/
-node_modules/
