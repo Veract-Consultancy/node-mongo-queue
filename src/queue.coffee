@@ -65,6 +65,9 @@ class exports.Connection extends EventEmitter
 
     url += "#{opt.host || '127.0.0.1'}:#{opt.port || 27017}/#{opt.db || 'queue'}?w=1"
 
+    if typeof opt is 'string'
+      url = opt
+      
     mongodb.MongoClient.connect url, (err, _db) =>
       @emit('error', err) if err
       db = _db if _db
